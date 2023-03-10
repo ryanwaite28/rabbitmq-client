@@ -2,6 +2,8 @@
 
 Simple Rabbit MQ Wrapper of <a href="https://www.npmjs.com/package/amqplib" title="npm library">`amqplib`</a>.
 
+When RxJS Meets Rabbit MQ!
+
 
 
 
