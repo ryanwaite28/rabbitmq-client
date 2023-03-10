@@ -1,0 +1,60 @@
+onQueue(queue: string) {
+    const handle = (key: string) => {
+      const listener = new Observable<amqplib.ConsumeMessage>((observer) => {
+        const message = this.channel.consume(queue, (msg) => {
+          if (msg !== null) {
+            observer.next(msg);
+          }
+          else {
+            console.log('Consumer cancelled by server');
+            observer.error();
+          }
+        });
+      });
+
+      const observable = this.onReady.pipe(
+        mergeMap((ready: boolean, index: number) => listener)
+      );
+      return observable;
+    };
+
+    const sendMessage = (options: {
+      data: any,
+      sendOptions: amqplib.Options.Publish
+    }) => {
+      const { data, sendOptions } = options;
+      const results = this.channel.sendToQueue(queue, data, sendOptions);
+      return results;
+    }
+
+    return {
+      handle,
+      sendMessage,
+    }
+  }
+
+  onExchange(exchange: string) {
+    const publishEvent = (options: {
+      data: any,
+      routingKey: string,
+      publishOptions: amqplib.Options.Publish
+    }) => {
+      const publish = () => {
+        const { data, routingKey, publishOptions } = options;
+        this.channel.publish(exchange, routingKey, data, publishOptions);
+      };
+
+      if (!this.isReady) {
+        this.onReady.subscribe({
+          next: () => { publish(); }
+        });
+      }
+      else {
+        publish();
+      }
+    }
+
+    return {
+      publishEvent
+    };
+  }

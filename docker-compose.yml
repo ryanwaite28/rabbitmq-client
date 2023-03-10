@@ -1,0 +1,59 @@
+version: '3.8'
+
+
+volumes:
+
+  rabbitmq_db:
+    driver: local
+
+  rabbitmq_config:
+    driver: local
+
+
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3.11-management
+    restart: always
+    hostname: rabbitmq
+    ports:
+      - '5672:5672'
+      - 15672:15672
+    volumes:
+      - rabbitmq_db:/var
+      - rabbitmq_config:/etc
+
+
+
+  send:
+    build:
+      context: .
+      dockerfile: node.Dockerfile
+      args:
+        APP: send.js
+    environment:
+      RABBIT_MQ_URL: amqp://guest:guest@rabbitmq:5672
+    command: npm run start-watch dist/send.js
+    # command: node dist/send.js
+    depends_on:
+      - rabbitmq
+    volumes:
+        - .:/app
+        - /app/node_modules
+
+  receive:
+    build:
+      context: .
+      dockerfile: node.Dockerfile
+      args:
+        APP: receive.js
+    environment:
+      RABBIT_MQ_URL: amqp://guest:guest@rabbitmq:5672
+    command: npm run start-watch dist/receive.js
+    # command: node dist/receive.js
+    depends_on:
+      - rabbitmq
+    volumes:
+        - .:/app
+        - /app/node_modules

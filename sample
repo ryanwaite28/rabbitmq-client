@@ -1,0 +1,1044 @@
+receive_1   |       password: '$2a$10$pratDFD1fYaTAxu9reAdQuEyZ0L6i0pkkShOu5uVxMMtMrHkZC.J2',
+receive_1   |       id: 1678429914824
+receive_1   |     }
+receive_1   |   ]
+receive_1   | }
+send_1      | [nodemon] restarting due to changes...
+receive_1   | [nodemon] restarting due to changes...
+rabbitmq_1  | 2023-03-10 06:31:59.638511+00:00 [warning] <0.970.0> closing AMQP connection <0.970.0> (192.168.208.3:51528 -> 192.168.208.2:5672, vhost: '/', user: 'guest'):
+rabbitmq_1  | 2023-03-10 06:31:59.638511+00:00 [warning] <0.970.0> client unexpectedly closed TCP connection
+rabbitmq_1  | 2023-03-10 06:31:59.638896+00:00 [warning] <0.967.0> closing AMQP connection <0.967.0> (192.168.208.4:47082 -> 192.168.208.2:5672, vhost: '/', user: 'guest'):
+rabbitmq_1  | 2023-03-10 06:31:59.638896+00:00 [warning] <0.967.0> client unexpectedly closed TCP connection
+receive_1   | [nodemon] starting `node dist/receive.js`
+send_1      | [nodemon] starting `node dist/send.js`
+rabbitmq_1  | 2023-03-10 06:32:04.910574+00:00 [info] <0.1027.0> accepting AMQP connection <0.1027.0> (192.168.208.3:51538 -> 192.168.208.2:5672)
+rabbitmq_1  | 2023-03-10 06:32:04.913252+00:00 [info] <0.1030.0> accepting AMQP connection <0.1030.0> (192.168.208.4:47096 -> 192.168.208.2:5672)
+rabbitmq_1  | 2023-03-10 06:32:04.920343+00:00 [info] <0.1027.0> connection <0.1027.0> (192.168.208.3:51538 -> 192.168.208.2:5672): user 'guest' authenticated and granted access to vhost '/'
+send_1      | connected to message server
+rabbitmq_1  | 2023-03-10 06:32:04.922945+00:00 [info] <0.1030.0> connection <0.1030.0> (192.168.208.4:47096 -> 192.168.208.2:5672): user 'guest' authenticated and granted access to vhost '/'
+receive_1   | connected to message server
+send_1      | channel created on message server
+receive_1   | channel created on message server
+send_1      | queues created on channel
+receive_1   | queues created on channel
+send_1      | exchanges created on channel
+receive_1   | exchanges created on channel
+send_1      | bindings created on channel
+send_1      | Client initialization complete.
+send_1      | 
+receive_1   | bindings created on channel
+receive_1   | Client initialization complete.
+receive_1   | 
+send_1      | [USERS_FETCHED] Received users fetched event: { data: { users: [ [Object] ] } }
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$aclMIPLwDP/CskQXnPWEE.hh.BOc3ufvrf8A3lTN6qJpOma492aMW',
+receive_1   |     id: 1678429935104
+receive_1   |   }
+receive_1   | }
+receive_1   | 
+send_1      | [FETCH_USERS] Sending fetch users message...
+send_1      | is ready to send message
+receive_1   | [FETCH_USERS] Received fetch users message: {
+receive_1   |   data: '',
+receive_1   |   usersCreated: [
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$aclMIPLwDP/CskQXnPWEE.hh.BOc3ufvrf8A3lTN6qJpOma492aMW',
+receive_1   |       id: 1678429935104
+receive_1   |     }
+receive_1   |   ]
+receive_1   | }
+receive_1   | [USER_CREATED] handled create user message, emitting event...
+receive_1   | is ready to publish event
+receive_1   | [USERS_FETCHED] handled fetched users message, emitting event.
+receive_1   | is ready to publish event
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$o2DMhxvJWC55O4hz313wSeeOFuaEdqZ2wYPVgJIAOC2Uy3qx2bz5O',
+receive_1   |     id: 1678429950077
+receive_1   |   }
+receive_1   | }
+receive_1   | 
+receive_1   | [USER_CREATED] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USERS] Sending fetch users message...
+send_1      | is ready to send message
+receive_1   | [FETCH_USERS] Received fetch users message: {
+receive_1   |   data: '',
+receive_1   |   usersCreated: [
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$aclMIPLwDP/CskQXnPWEE.hh.BOc3ufvrf8A3lTN6qJpOma492aMW',
+receive_1   |       id: 1678429935104
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$o2DMhxvJWC55O4hz313wSeeOFuaEdqZ2wYPVgJIAOC2Uy3qx2bz5O',
+receive_1   |       id: 1678429950077
+receive_1   |     }
+receive_1   |   ]
+receive_1   | }
+^CGracefully stopping... (press Ctrl+C again to force)
+Killing rabbitmq-client_receive_1     ... done
+Killing rabbitmq-client_send_1        ... done
+Killing rabbitmq-client_rabbitmq_1    ... done
+ERROR: 2
+(base) C02YX5WZLVCG:rabbitmq-client k28497$ 
+(base) C02YX5WZLVCG:rabbitmq-client k28497$ 
+(base) C02YX5WZLVCG:rabbitmq-client k28497$ 
+(base) C02YX5WZLVCG:rabbitmq-client k28497$ docker-compose down --rmi all --volumes
+Removing rabbitmq-client_receive_1  ... done
+Removing rabbitmq-client_send_1     ... done
+Removing rabbitmq-client_rabbitmq_1 ... done
+Removing network rabbitmq-client_default
+Removing volume rabbitmq-client_rabbitmq_db
+Removing volume rabbitmq-client_rabbitmq_config
+Removing image rabbitmq:3.11-management
+Removing image rabbitmq-client_send
+Removing image rabbitmq-client_receive
+(base) C02YX5WZLVCG:rabbitmq-client k28497$ 
+(base) C02YX5WZLVCG:rabbitmq-client k28497$ docker-compose up --remove-orphans --force-recreate
+Creating network "rabbitmq-client_default" with the default driver
+Creating volume "rabbitmq-client_rabbitmq_db" with local driver
+Creating volume "rabbitmq-client_rabbitmq_config" with local driver
+Pulling rabbitmq (rabbitmq:3.11-management)...
+3.11-management: Pulling from library/rabbitmq
+df6635ed1257: Pull complete
+51d91e84cfcc: Pull complete
+a09f83bfdf73: Pull complete
+861bc8a22fde: Pull complete
+85ea0f41bb87: Pull complete
+2f678c17c864: Pull complete
+2d74941d78bb: Pull complete
+ce5c56763692: Pull complete
+02afacb20f39: Pull complete
+bc79ef82cb4b: Pull complete
+4f9f571f249a: Pull complete
+Digest: sha256:9b6e40331d65f066b48e2fa82ec295149672087e328d7c8db6a6b61b36fa028c
+Status: Downloaded newer image for rabbitmq:3.11-management
+Building send
+[+] Building 10.0s (12/12) FINISHED                                                                                                                                                                                                                                                     
+ => [internal] load build definition from node.Dockerfile                                                                                                                                                                                                                          0.0s
+ => => transferring dockerfile: 47B                                                                                                                                                                                                                                                0.0s
+ => [internal] load .dockerignore                                                                                                                                                                                                                                                  0.0s
+ => => transferring context: 34B                                                                                                                                                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/node:14-alpine                                                                                                                                                                                                                  1.6s
+ => [auth] library/node:pull token for registry-1.docker.io                                                                                                                                                                                                                        0.0s
+ => [1/6] FROM docker.io/library/node:14-alpine@sha256:2825e1c8aad5786d79d6fce6ce14cf4c903bd4e03b84f586afe4e39430665fe4                                                                                                                                                            0.0s
+ => [internal] load build context                                                                                                                                                                                                                                                  0.0s
+ => => transferring context: 8.03kB                                                                                                                                                                                                                                                0.0s
+ => CACHED [2/6] WORKDIR /app                                                                                                                                                                                                                                                      0.0s
+ => CACHED [3/6] COPY package.json /app                                                                                                                                                                                                                                            0.0s
+ => CACHED [4/6] RUN npm i                                                                                                                                                                                                                                                         0.0s
+ => [5/6] COPY . /app                                                                                                                                                                                                                                                              0.2s
+ => [6/6] RUN npm run tsc                                                                                                                                                                                                                                                          8.0s
+ => exporting to image                                                                                                                                                                                                                                                             0.0s 
+ => => exporting layers                                                                                                                                                                                                                                                            0.0s 
+ => => writing image sha256:7e6ef3cea62f378897333daeae3eaeb54eb751ae2c0cd9a0e536a5fdafc7aaab                                                                                                                                                                                       0.0s
+ => => naming to docker.io/library/rabbitmq-client_send                                                                                                                                                                                                                            0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+WARNING: Image for service send was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Building receive
+[+] Building 0.3s (11/11) FINISHED                                                                                                                                                                                                                                                      
+ => [internal] load build definition from node.Dockerfile                                                                                                                                                                                                                          0.0s
+ => => transferring dockerfile: 47B                                                                                                                                                                                                                                                0.0s
+ => [internal] load .dockerignore                                                                                                                                                                                                                                                  0.0s
+ => => transferring context: 34B                                                                                                                                                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/node:14-alpine                                                                                                                                                                                                                  0.2s
+ => [internal] load build context                                                                                                                                                                                                                                                  0.0s
+ => => transferring context: 525B                                                                                                                                                                                                                                                  0.0s
+ => [1/6] FROM docker.io/library/node:14-alpine@sha256:2825e1c8aad5786d79d6fce6ce14cf4c903bd4e03b84f586afe4e39430665fe4                                                                                                                                                            0.0s
+ => CACHED [2/6] WORKDIR /app                                                                                                                                                                                                                                                      0.0s
+ => CACHED [3/6] COPY package.json /app                                                                                                                                                                                                                                            0.0s
+ => CACHED [4/6] RUN npm i                                                                                                                                                                                                                                                         0.0s
+ => CACHED [5/6] COPY . /app                                                                                                                                                                                                                                                       0.0s
+ => CACHED [6/6] RUN npm run tsc                                                                                                                                                                                                                                                   0.0s
+ => exporting to image                                                                                                                                                                                                                                                             0.0s
+ => => exporting layers                                                                                                                                                                                                                                                            0.0s
+ => => writing image sha256:7e6ef3cea62f378897333daeae3eaeb54eb751ae2c0cd9a0e536a5fdafc7aaab                                                                                                                                                                                       0.0s
+ => => naming to docker.io/library/rabbitmq-client_receive                                                                                                                                                                                                                         0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+WARNING: Image for service receive was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating rabbitmq-client_rabbitmq_1 ... done
+Creating rabbitmq-client_send_1     ... done
+Creating rabbitmq-client_receive_1  ... done
+Attaching to rabbitmq-client_rabbitmq_1, rabbitmq-client_receive_1, rabbitmq-client_send_1
+send_1      | 
+send_1      | > rabbitmq-client@1.0.0 start-watch /app
+send_1      | > nodemon "dist/send.js"
+send_1      | 
+receive_1   | 
+receive_1   | > rabbitmq-client@1.0.0 start-watch /app
+receive_1   | > nodemon "dist/receive.js"
+receive_1   | 
+receive_1   | [nodemon] 2.0.21
+receive_1   | [nodemon] to restart at any time, enter `rs`
+receive_1   | [nodemon] watching path(s): *.*
+receive_1   | [nodemon] watching extensions: js,mjs,json
+receive_1   | [nodemon] starting `node dist/receive.js`
+send_1      | [nodemon] 2.0.21
+send_1      | [nodemon] to restart at any time, enter `rs`
+send_1      | [nodemon] watching path(s): *.*
+send_1      | [nodemon] watching extensions: js,mjs,json
+send_1      | [nodemon] starting `node dist/send.js`
+rabbitmq_1  | 2023-03-10 06:33:41.635994+00:00 [notice] <0.44.0> Application syslog exited with reason: stopped
+rabbitmq_1  | 2023-03-10 06:33:41.643439+00:00 [notice] <0.230.0> Logging: switching to configured handler(s); following messages may not be visible in this log output
+rabbitmq_1  | 2023-03-10 06:33:41.667297+00:00 [notice] <0.230.0> Logging: configured log handlers are now ACTIVE
+rabbitmq_1  | 2023-03-10 06:33:41.940866+00:00 [info] <0.230.0> ra: starting system quorum_queues
+rabbitmq_1  | 2023-03-10 06:33:41.940991+00:00 [info] <0.230.0> starting Ra system: quorum_queues in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/quorum/rabbit@rabbitmq
+rabbitmq_1  | 2023-03-10 06:33:42.031998+00:00 [info] <0.266.0> ra system 'quorum_queues' running pre init for 0 registered servers
+rabbitmq_1  | 2023-03-10 06:33:42.048628+00:00 [info] <0.267.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered
+rabbitmq_1  | 2023-03-10 06:33:42.069926+00:00 [notice] <0.272.0> WAL: ra_log_wal init, open tbls: ra_log_open_mem_tables, closed tbls: ra_log_closed_mem_tables
+rabbitmq_1  | 2023-03-10 06:33:42.079370+00:00 [info] <0.230.0> ra: starting system coordination
+rabbitmq_1  | 2023-03-10 06:33:42.079434+00:00 [info] <0.230.0> starting Ra system: coordination in directory: /var/lib/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq
+rabbitmq_1  | 2023-03-10 06:33:42.081689+00:00 [info] <0.279.0> ra system 'coordination' running pre init for 0 registered servers
+rabbitmq_1  | 2023-03-10 06:33:42.082841+00:00 [info] <0.280.0> ra: meta data store initialised for system coordination. 0 record(s) recovered
+rabbitmq_1  | 2023-03-10 06:33:42.083116+00:00 [notice] <0.285.0> WAL: ra_coordination_log_wal init, open tbls: ra_coordination_log_open_mem_tables, closed tbls: ra_coordination_log_closed_mem_tables
+rabbitmq_1  | 2023-03-10 06:33:42.099473+00:00 [info] <0.230.0> 
+rabbitmq_1  | 2023-03-10 06:33:42.099473+00:00 [info] <0.230.0>  Starting RabbitMQ 3.11.10 on Erlang 25.3 [jit]
+rabbitmq_1  | 2023-03-10 06:33:42.099473+00:00 [info] <0.230.0>  Copyright (c) 2007-2023 VMware, Inc. or its affiliates.
+rabbitmq_1  | 2023-03-10 06:33:42.099473+00:00 [info] <0.230.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+rabbitmq_1  | 
+rabbitmq_1  |   ##  ##      RabbitMQ 3.11.10
+rabbitmq_1  |   ##  ##
+rabbitmq_1  |   ##########  Copyright (c) 2007-2023 VMware, Inc. or its affiliates.
+rabbitmq_1  |   ######  ##
+rabbitmq_1  |   ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+rabbitmq_1  | 
+rabbitmq_1  |   Erlang:      25.3 [jit]
+rabbitmq_1  |   TLS Library: OpenSSL - OpenSSL 3.0.8 7 Feb 2023
+rabbitmq_1  |   Release series support status: supported
+rabbitmq_1  | 
+rabbitmq_1  |   Doc guides:  https://rabbitmq.com/documentation.html
+rabbitmq_1  |   Support:     https://rabbitmq.com/contact.html
+rabbitmq_1  |   Tutorials:   https://rabbitmq.com/getstarted.html
+rabbitmq_1  |   Monitoring:  https://rabbitmq.com/monitoring.html
+rabbitmq_1  | 
+rabbitmq_1  |   Logs: /var/log/rabbitmq/rabbit@rabbitmq_upgrade.log
+rabbitmq_1  |         <stdout>
+rabbitmq_1  | 
+rabbitmq_1  |   Config file(s): /etc/rabbitmq/conf.d/10-defaults.conf
+rabbitmq_1  | 
+rabbitmq_1  |   Starting broker...2023-03-10 06:33:42.107060+00:00 [info] <0.230.0> 
+rabbitmq_1  | 2023-03-10 06:33:42.107060+00:00 [info] <0.230.0>  node           : rabbit@rabbitmq
+rabbitmq_1  | 2023-03-10 06:33:42.107060+00:00 [info] <0.230.0>  home dir       : /var/lib/rabbitmq
+rabbitmq_1  | 2023-03-10 06:33:42.107060+00:00 [info] <0.230.0>  config file(s) : /etc/rabbitmq/conf.d/10-defaults.conf
+rabbitmq_1  | 2023-03-10 06:33:42.107060+00:00 [info] <0.230.0>  cookie hash    : UvWjlN1wrXakF4fLX5KOBw==
+rabbitmq_1  | 2023-03-10 06:33:42.107060+00:00 [info] <0.230.0>  log(s)         : /var/log/rabbitmq/rabbit@rabbitmq_upgrade.log
+rabbitmq_1  | 2023-03-10 06:33:42.107060+00:00 [info] <0.230.0>                 : <stdout>
+rabbitmq_1  | 2023-03-10 06:33:42.107060+00:00 [info] <0.230.0>  database dir   : /var/lib/rabbitmq/mnesia/rabbit@rabbitmq
+send_1      | connection error, retryAttempts: 3 Error: connect ECONNREFUSED 192.168.224.2:5672
+send_1      |     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
+send_1      |   errno: -111,
+send_1      |   code: 'ECONNREFUSED',
+send_1      |   syscall: 'connect',
+send_1      |   address: '192.168.224.2',
+send_1      |   port: 5672
+send_1      | }
+receive_1   | connection error, retryAttempts: 3 Error: connect ECONNREFUSED 192.168.224.2:5672
+receive_1   |     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16) {
+receive_1   |   errno: -111,
+receive_1   |   code: 'ECONNREFUSED',
+receive_1   |   syscall: 'connect',
+receive_1   |   address: '192.168.224.2',
+receive_1   |   port: 5672
+receive_1   | }
+rabbitmq_1  | 2023-03-10 06:33:45.838528+00:00 [info] <0.230.0> Running boot step pre_boot defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:45.838585+00:00 [info] <0.230.0> Running boot step rabbit_global_counters defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:45.839308+00:00 [info] <0.230.0> Running boot step rabbit_osiris_metrics defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:45.839462+00:00 [info] <0.230.0> Running boot step rabbit_core_metrics defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:45.840461+00:00 [info] <0.230.0> Running boot step rabbit_alarm defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:45.847013+00:00 [info] <0.300.0> Memory high watermark set to 793 MiB (832525107 bytes) of 1984 MiB (2081312768 bytes) total
+rabbitmq_1  | 2023-03-10 06:33:45.852302+00:00 [info] <0.302.0> Enabling free disk space monitoring (disk free space: 24896667648, total memory: 2081312768)
+rabbitmq_1  | 2023-03-10 06:33:45.852374+00:00 [info] <0.302.0> Disk free limit set to 50MB
+rabbitmq_1  | 2023-03-10 06:33:45.855069+00:00 [info] <0.230.0> Running boot step code_server_cache defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:45.855196+00:00 [info] <0.230.0> Running boot step file_handle_cache defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:45.855622+00:00 [info] <0.305.0> Limiting to approx 1048479 file handles (943629 sockets)
+rabbitmq_1  | 2023-03-10 06:33:45.855907+00:00 [info] <0.306.0> FHC read buffering: OFF
+rabbitmq_1  | 2023-03-10 06:33:45.855979+00:00 [info] <0.306.0> FHC write buffering: ON
+rabbitmq_1  | 2023-03-10 06:33:45.857722+00:00 [info] <0.230.0> Running boot step worker_pool defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:45.857979+00:00 [info] <0.287.0> Will use 8 processes for default worker pool
+rabbitmq_1  | 2023-03-10 06:33:45.858099+00:00 [info] <0.287.0> Starting worker pool 'worker_pool' with 8 processes in it
+rabbitmq_1  | 2023-03-10 06:33:45.859383+00:00 [info] <0.230.0> Running boot step database defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:45.860351+00:00 [info] <0.230.0> Node database directory at /var/lib/rabbitmq/mnesia/rabbit@rabbitmq is empty. Assuming we need to join an existing cluster or initialise from scratch...
+rabbitmq_1  | 2023-03-10 06:33:45.860430+00:00 [info] <0.230.0> Configured peer discovery backend: rabbit_peer_discovery_classic_config
+rabbitmq_1  | 2023-03-10 06:33:45.860467+00:00 [info] <0.230.0> Will try to lock with peer discovery backend rabbit_peer_discovery_classic_config
+rabbitmq_1  | 2023-03-10 06:33:45.860600+00:00 [info] <0.230.0> All discovered existing cluster peers:
+rabbitmq_1  | 2023-03-10 06:33:45.860653+00:00 [info] <0.230.0> Discovered no peer nodes to cluster with. Some discovery backends can filter nodes out based on a readiness criteria. Enabling debug logging might help troubleshoot.
+rabbitmq_1  | 2023-03-10 06:33:45.864053+00:00 [notice] <0.44.0> Application mnesia exited with reason: stopped
+rabbitmq_1  | 2023-03-10 06:33:46.005513+00:00 [info] <0.230.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq_1  | 2023-03-10 06:33:46.005843+00:00 [info] <0.230.0> Successfully synced tables from a peer
+rabbitmq_1  | 2023-03-10 06:33:46.016290+00:00 [info] <0.230.0> Feature flags: `feature_flags_v2`: supported, attempt to enable...
+rabbitmq_1  | 2023-03-10 06:33:46.041286+00:00 [notice] <0.288.0> Feature flags: attempt to enable `classic_mirrored_queue_version`...
+rabbitmq_1  | 2023-03-10 06:33:46.067642+00:00 [notice] <0.288.0> Feature flags: `classic_mirrored_queue_version` enabled
+rabbitmq_1  | 2023-03-10 06:33:46.068285+00:00 [notice] <0.288.0> Feature flags: attempt to enable `classic_queue_type_delivery_support`...
+rabbitmq_1  | 2023-03-10 06:33:46.080951+00:00 [notice] <0.288.0> Feature flags: attempt to enable `stream_queue`...
+rabbitmq_1  | 2023-03-10 06:33:46.110722+00:00 [notice] <0.288.0> Feature flags: `stream_queue` enabled
+rabbitmq_1  | 2023-03-10 06:33:46.126209+00:00 [notice] <0.288.0> Feature flags: `classic_queue_type_delivery_support` enabled
+rabbitmq_1  | 2023-03-10 06:33:46.127241+00:00 [notice] <0.288.0> Feature flags: attempt to enable `direct_exchange_routing_v2`...
+rabbitmq_1  | 2023-03-10 06:33:46.140630+00:00 [info] <0.503.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq_1  | 2023-03-10 06:33:46.140941+00:00 [info] <0.503.0> Successfully synced tables from a peer
+rabbitmq_1  | 2023-03-10 06:33:46.163002+00:00 [notice] <0.288.0> Feature flags: `direct_exchange_routing_v2` enabled
+rabbitmq_1  | 2023-03-10 06:33:46.163902+00:00 [notice] <0.288.0> Feature flags: attempt to enable `drop_unroutable_metric`...
+rabbitmq_1  | 2023-03-10 06:33:46.192690+00:00 [notice] <0.288.0> Feature flags: `drop_unroutable_metric` enabled
+rabbitmq_1  | 2023-03-10 06:33:46.193445+00:00 [notice] <0.288.0> Feature flags: attempt to enable `empty_basic_get_metric`...
+rabbitmq_1  | 2023-03-10 06:33:46.222905+00:00 [notice] <0.288.0> Feature flags: `empty_basic_get_metric` enabled
+rabbitmq_1  | 2023-03-10 06:33:46.224211+00:00 [notice] <0.288.0> Feature flags: attempt to enable `listener_records_in_ets`...
+rabbitmq_1  | 2023-03-10 06:33:46.269191+00:00 [notice] <0.288.0> Feature flags: `listener_records_in_ets` enabled
+rabbitmq_1  | 2023-03-10 06:33:46.270691+00:00 [notice] <0.288.0> Feature flags: attempt to enable `stream_single_active_consumer`...
+rabbitmq_1  | 2023-03-10 06:33:46.296020+00:00 [notice] <0.288.0> Feature flags: `stream_single_active_consumer` enabled
+rabbitmq_1  | 2023-03-10 06:33:46.296928+00:00 [notice] <0.288.0> Feature flags: attempt to enable `tracking_records_in_ets`...
+rabbitmq_1  | 2023-03-10 06:33:46.325320+00:00 [notice] <0.288.0> Feature flags: `tracking_records_in_ets` enabled
+rabbitmq_1  | 2023-03-10 06:33:46.326395+00:00 [info] <0.230.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq_1  | 2023-03-10 06:33:46.326588+00:00 [info] <0.230.0> Successfully synced tables from a peer
+rabbitmq_1  | 2023-03-10 06:33:46.338179+00:00 [info] <0.230.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq_1  | 2023-03-10 06:33:46.338387+00:00 [info] <0.230.0> Successfully synced tables from a peer
+rabbitmq_1  | 2023-03-10 06:33:46.338469+00:00 [info] <0.230.0> Peer discovery backend rabbit_peer_discovery_classic_config does not support registration, skipping registration.
+rabbitmq_1  | 2023-03-10 06:33:46.338712+00:00 [info] <0.230.0> Will try to unlock with peer discovery backend rabbit_peer_discovery_classic_config
+rabbitmq_1  | 2023-03-10 06:33:46.338791+00:00 [info] <0.230.0> Running boot step tracking_metadata_store defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.338961+00:00 [info] <0.625.0> Setting up a table for connection tracking on this node: tracked_connection
+rabbitmq_1  | 2023-03-10 06:33:46.339130+00:00 [info] <0.625.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost
+rabbitmq_1  | 2023-03-10 06:33:46.339221+00:00 [info] <0.625.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user
+rabbitmq_1  | 2023-03-10 06:33:46.339378+00:00 [info] <0.625.0> Setting up a table for channel tracking on this node: tracked_channel
+rabbitmq_1  | 2023-03-10 06:33:46.339446+00:00 [info] <0.625.0> Setting up a table for channel tracking on this node: tracked_channel_per_user
+rabbitmq_1  | 2023-03-10 06:33:46.339586+00:00 [info] <0.230.0> Running boot step networking_metadata_store defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.339766+00:00 [info] <0.230.0> Running boot step database_sync defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.339856+00:00 [info] <0.230.0> Running boot step feature_flags defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.340680+00:00 [info] <0.230.0> Running boot step codec_correctness_check defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.340743+00:00 [info] <0.230.0> Running boot step external_infrastructure defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.340778+00:00 [info] <0.230.0> Running boot step rabbit_event defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.341008+00:00 [info] <0.230.0> Running boot step rabbit_registry defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.341502+00:00 [info] <0.230.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.341918+00:00 [info] <0.230.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.342252+00:00 [info] <0.230.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.342412+00:00 [info] <0.230.0> Running boot step rabbit_exchange_type_direct defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.342847+00:00 [info] <0.230.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.342984+00:00 [info] <0.230.0> Running boot step rabbit_exchange_type_headers defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.343083+00:00 [info] <0.230.0> Running boot step rabbit_exchange_type_topic defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.343242+00:00 [info] <0.230.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.343671+00:00 [info] <0.230.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.344305+00:00 [info] <0.230.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.344562+00:00 [info] <0.230.0> Running boot step rabbit_priority_queue defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.344696+00:00 [info] <0.230.0> Priority queues enabled, real BQ is rabbit_variable_queue
+rabbitmq_1  | 2023-03-10 06:33:46.344844+00:00 [info] <0.230.0> Running boot step rabbit_queue_location_client_local defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.345084+00:00 [info] <0.230.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.345167+00:00 [info] <0.230.0> Running boot step rabbit_queue_location_random defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.345240+00:00 [info] <0.230.0> Running boot step kernel_ready defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.345283+00:00 [info] <0.230.0> Running boot step rabbit_sysmon_minder defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.345607+00:00 [info] <0.230.0> Running boot step rabbit_epmd_monitor defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.348392+00:00 [info] <0.634.0> epmd monitor knows us, inter-node communication (distribution) port: 25672
+rabbitmq_1  | 2023-03-10 06:33:46.348676+00:00 [info] <0.230.0> Running boot step guid_generator defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.352732+00:00 [info] <0.230.0> Running boot step rabbit_node_monitor defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.353128+00:00 [info] <0.638.0> Starting rabbit_node_monitor
+rabbitmq_1  | 2023-03-10 06:33:46.353335+00:00 [info] <0.230.0> Running boot step delegate_sup defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.354360+00:00 [info] <0.230.0> Running boot step rabbit_memory_monitor defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.354672+00:00 [info] <0.230.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.354854+00:00 [info] <0.230.0> Running boot step core_initialized defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.354973+00:00 [info] <0.230.0> Running boot step upgrade_queues defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.371670+00:00 [info] <0.230.0> message_store upgrades: 1 to apply
+rabbitmq_1  | 2023-03-10 06:33:46.372046+00:00 [info] <0.230.0> message_store upgrades: Applying rabbit_variable_queue:move_messages_to_vhost_store
+rabbitmq_1  | 2023-03-10 06:33:46.372375+00:00 [info] <0.230.0> message_store upgrades: No durable queues found. Skipping message store migration
+rabbitmq_1  | 2023-03-10 06:33:46.372475+00:00 [info] <0.230.0> message_store upgrades: Removing the old message store data
+rabbitmq_1  | 2023-03-10 06:33:46.373908+00:00 [info] <0.230.0> message_store upgrades: All upgrades applied successfully
+rabbitmq_1  | 2023-03-10 06:33:46.387196+00:00 [info] <0.230.0> Running boot step channel_tracking defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.387481+00:00 [info] <0.230.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.387700+00:00 [info] <0.230.0> Running boot step connection_tracking defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.387774+00:00 [info] <0.230.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.387842+00:00 [info] <0.230.0> Running boot step rabbit_definitions_hashing defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.388153+00:00 [info] <0.230.0> Running boot step rabbit_exchange_parameters defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.388569+00:00 [info] <0.230.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.389032+00:00 [info] <0.230.0> Running boot step rabbit_policies defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.389347+00:00 [info] <0.230.0> Running boot step rabbit_policy defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.389431+00:00 [info] <0.230.0> Running boot step rabbit_queue_location_validator defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.389499+00:00 [info] <0.230.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.389567+00:00 [info] <0.230.0> Running boot step rabbit_stream_coordinator defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.391424+00:00 [info] <0.230.0> Running boot step rabbit_vhost_limit defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.391711+00:00 [info] <0.230.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management
+rabbitmq_1  | 2023-03-10 06:33:46.391919+00:00 [info] <0.230.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent
+rabbitmq_1  | 2023-03-10 06:33:46.391989+00:00 [info] <0.230.0> Management plugin: using rates mode 'basic'
+rabbitmq_1  | 2023-03-10 06:33:46.392424+00:00 [info] <0.230.0> Running boot step recovery defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.393646+00:00 [info] <0.230.0> Running boot step empty_db_check defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.393828+00:00 [info] <0.230.0> Will seed default virtual host and user...
+rabbitmq_1  | 2023-03-10 06:33:46.394037+00:00 [info] <0.230.0> Adding vhost '/' (description: 'Default virtual host', tags: [])
+rabbitmq_1  | 2023-03-10 06:33:46.400101+00:00 [info] <0.230.0> Applying default limits to vhost '<<"/">>': []
+rabbitmq_1  | 2023-03-10 06:33:46.417754+00:00 [info] <0.680.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists
+rabbitmq_1  | 2023-03-10 06:33:46.426488+00:00 [info] <0.680.0> Setting segment_entry_count for vhost '/' with 0 queues to '2048'
+rabbitmq_1  | 2023-03-10 06:33:46.441448+00:00 [info] <0.680.0> Starting message stores for vhost '/'
+rabbitmq_1  | 2023-03-10 06:33:46.442005+00:00 [info] <0.685.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index
+rabbitmq_1  | 2023-03-10 06:33:46.445077+00:00 [info] <0.680.0> Started message store of type transient for vhost '/'
+rabbitmq_1  | 2023-03-10 06:33:46.445362+00:00 [info] <0.689.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index
+rabbitmq_1  | 2023-03-10 06:33:46.446989+00:00 [warning] <0.689.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch
+rabbitmq_1  | 2023-03-10 06:33:46.449155+00:00 [info] <0.680.0> Started message store of type persistent for vhost '/'
+rabbitmq_1  | 2023-03-10 06:33:46.449393+00:00 [info] <0.680.0> Recovering 0 queues of type rabbit_classic_queue took 20ms
+rabbitmq_1  | 2023-03-10 06:33:46.449458+00:00 [info] <0.680.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms
+rabbitmq_1  | 2023-03-10 06:33:46.449544+00:00 [info] <0.680.0> Recovering 0 queues of type rabbit_stream_queue took 0ms
+rabbitmq_1  | 2023-03-10 06:33:46.454371+00:00 [info] <0.230.0> Created user 'guest'
+rabbitmq_1  | 2023-03-10 06:33:46.457868+00:00 [info] <0.230.0> Successfully set user tags for user 'guest' to [administrator]
+rabbitmq_1  | 2023-03-10 06:33:46.461492+00:00 [info] <0.230.0> Successfully set permissions for 'guest' in virtual host '/' to '.*', '.*', '.*'
+rabbitmq_1  | 2023-03-10 06:33:46.461604+00:00 [info] <0.230.0> Running boot step rabbit_observer_cli defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.461698+00:00 [info] <0.230.0> Running boot step rabbit_looking_glass defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.461735+00:00 [info] <0.230.0> Running boot step rabbit_core_metrics_gc defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.462008+00:00 [info] <0.230.0> Running boot step background_gc defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.462648+00:00 [info] <0.230.0> Running boot step routing_ready defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.462802+00:00 [info] <0.230.0> Running boot step pre_flight defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.462878+00:00 [info] <0.230.0> Running boot step notify_cluster defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.462920+00:00 [info] <0.230.0> Running boot step networking defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.463450+00:00 [info] <0.230.0> Running boot step definition_import_worker_pool defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.463741+00:00 [info] <0.287.0> Starting worker pool 'definition_import_pool' with 8 processes in it
+rabbitmq_1  | 2023-03-10 06:33:46.466208+00:00 [info] <0.230.0> Running boot step cluster_name defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.466663+00:00 [info] <0.230.0> Initialising internal cluster ID to 'rabbitmq-cluster-id-6oMGZ2wwD2wCE37s9AB7kw'
+rabbitmq_1  | 2023-03-10 06:33:46.471322+00:00 [info] <0.230.0> Running boot step direct_client defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.471632+00:00 [info] <0.230.0> Running boot step rabbit_maintenance_mode_state defined by app rabbit
+rabbitmq_1  | 2023-03-10 06:33:46.471722+00:00 [info] <0.230.0> Creating table rabbit_node_maintenance_states for maintenance mode status
+rabbitmq_1  | 2023-03-10 06:33:46.479971+00:00 [info] <0.230.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management
+rabbitmq_1  | 2023-03-10 06:33:46.480220+00:00 [info] <0.730.0> Resetting node maintenance status
+rabbitmq_1  | 2023-03-10 06:33:46.495094+00:00 [info] <0.789.0> Management plugin: HTTP (non-TLS) listener started on port 15672
+rabbitmq_1  | 2023-03-10 06:33:46.495290+00:00 [info] <0.817.0> Statistics database started.
+rabbitmq_1  | 2023-03-10 06:33:46.495372+00:00 [info] <0.816.0> Starting worker pool 'management_worker_pool' with 3 processes in it
+rabbitmq_1  | 2023-03-10 06:33:46.504861+00:00 [info] <0.831.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692
+rabbitmq_1  | 2023-03-10 06:33:46.505090+00:00 [info] <0.730.0> Ready to start client connection listeners
+rabbitmq_1  | 2023-03-10 06:33:46.508440+00:00 [info] <0.875.0> started TCP listener on [::]:5672
+rabbitmq_1  |  completed with 4 plugins.
+rabbitmq_1  | 2023-03-10 06:33:46.640085+00:00 [info] <0.730.0> Server startup complete; 4 plugins started.
+rabbitmq_1  | 2023-03-10 06:33:46.640085+00:00 [info] <0.730.0>  * rabbitmq_prometheus
+rabbitmq_1  | 2023-03-10 06:33:46.640085+00:00 [info] <0.730.0>  * rabbitmq_management
+rabbitmq_1  | 2023-03-10 06:33:46.640085+00:00 [info] <0.730.0>  * rabbitmq_web_dispatch
+rabbitmq_1  | 2023-03-10 06:33:46.640085+00:00 [info] <0.730.0>  * rabbitmq_management_agent
+rabbitmq_1  | 2023-03-10 06:33:47.656886+00:00 [info] <0.878.0> accepting AMQP connection <0.878.0> (192.168.224.4:49728 -> 192.168.224.2:5672)
+rabbitmq_1  | 2023-03-10 06:33:47.666878+00:00 [info] <0.878.0> connection <0.878.0> (192.168.224.4:49728 -> 192.168.224.2:5672): user 'guest' authenticated and granted access to vhost '/'
+send_1      | connected to message server
+rabbitmq_1  | 2023-03-10 06:33:47.670816+00:00 [info] <0.886.0> accepting AMQP connection <0.886.0> (192.168.224.3:51708 -> 192.168.224.2:5672)
+send_1      | channel created on message server
+rabbitmq_1  | 2023-03-10 06:33:47.680217+00:00 [info] <0.886.0> connection <0.886.0> (192.168.224.3:51708 -> 192.168.224.2:5672): user 'guest' authenticated and granted access to vhost '/'
+receive_1   | connected to message server
+receive_1   | channel created on message server
+receive_1   | queues created on channel
+send_1      | queues created on channel
+send_1      | exchanges created on channel
+receive_1   | exchanges created on channel
+send_1      | bindings created on channel
+send_1      | Client initialization complete.
+send_1      | 
+receive_1   | bindings created on channel
+receive_1   | Client initialization complete.
+receive_1   | 
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+receive_1   |     id: 1678430034878
+receive_1   |   }
+receive_1   | }
+receive_1   | 
+send_1      | [FETCH_USERS] Sending fetch users message...
+send_1      | is ready to send message
+receive_1   | [FETCH_USERS] Received fetch users message: {
+receive_1   |   data: '',
+receive_1   |   usersCreated: [
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+receive_1   |       id: 1678430034878
+receive_1   |     }
+receive_1   |   ]
+receive_1   | }
+receive_1   | [USER_CREATED] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [USER_CREATED] Received user created event: {
+send_1      |   data: {
+send_1      |     name: 'John Doe',
+send_1      |     email: 'test@test.com',
+send_1      |     password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+send_1      |     id: 1678430034878
+send_1      |   }
+send_1      | }
+send_1      | { userIds: [ 1678430034878 ] }
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430043667' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USERS_FETCHED] handled fetched users message, emitting event.
+receive_1   | is ready to publish event
+send_1      | [USERS_FETCHED] Received users fetched event: { data: { users: [ [Object] ] } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | Closing consumer { consumerTag: '1678430043667' }
+send_1      | [USER_FETCHED_BY_ID] Received user fetched by id event in .then call -------: {
+send_1      |   data: {
+send_1      |     name: 'John Doe',
+send_1      |     email: 'test@test.com',
+send_1      |     password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+send_1      |     id: 1678430034878
+send_1      |   }
+send_1      | }
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430047670' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$lZktGnUT5J5WYDPsa.uStuJXH2bJfM4Wj1EKmJh2Kzq/B5UOVti56',
+receive_1   |     id: 1678430049816
+receive_1   |   }
+receive_1   | }
+receive_1   | 
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | Closing consumer { consumerTag: '1678430047670' }
+send_1      | [USER_FETCHED_BY_ID] Received user fetched by id event in .then call -------: {
+send_1      |   data: {
+send_1      |     name: 'John Doe',
+send_1      |     email: 'test@test.com',
+send_1      |     password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+send_1      |     id: 1678430034878
+send_1      |   }
+send_1      | }
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430051653' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | Closing consumer { consumerTag: '1678430051653' }
+send_1      | [USER_FETCHED_BY_ID] Received user fetched by id event in .then call -------: {
+send_1      |   data: {
+send_1      |     name: 'John Doe',
+send_1      |     email: 'test@test.com',
+send_1      |     password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+send_1      |     id: 1678430034878
+send_1      |   }
+send_1      | }
+receive_1   | [USER_CREATED] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430055658' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+send_1      | [FETCH_USERS] Sending fetch users message...
+send_1      | is ready to send message
+receive_1   | [FETCH_USERS] Received fetch users message: {
+receive_1   |   data: '',
+receive_1   |   usersCreated: [
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+receive_1   |       id: 1678430034878
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$lZktGnUT5J5WYDPsa.uStuJXH2bJfM4Wj1EKmJh2Kzq/B5UOVti56',
+receive_1   |       id: 1678430049816
+receive_1   |     }
+receive_1   |   ]
+receive_1   | }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430059661' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+receive_1   | [USERS_FETCHED] handled fetched users message, emitting event.
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430063666' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$A3d2A572ReZwn7JH.woPwuOQFEeokOVDqFs01RxYGsVv6orgzQTv6',
+receive_1   |     id: 1678430064819
+receive_1   |   }
+receive_1   | }
+receive_1   | 
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430067670' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+receive_1   | [USER_CREATED] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430071676' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430075682' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+send_1      | [FETCH_USERS] Sending fetch users message...
+send_1      | is ready to send message
+receive_1   | [FETCH_USERS] Received fetch users message: {
+receive_1   |   data: '',
+receive_1   |   usersCreated: [
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+receive_1   |       id: 1678430034878
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$lZktGnUT5J5WYDPsa.uStuJXH2bJfM4Wj1EKmJh2Kzq/B5UOVti56',
+receive_1   |       id: 1678430049816
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$A3d2A572ReZwn7JH.woPwuOQFEeokOVDqFs01RxYGsVv6orgzQTv6',
+receive_1   |       id: 1678430064819
+receive_1   |     }
+receive_1   |   ]
+receive_1   | }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430079662' }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$eXVcUQ/mlk5RARKhKr8fhuv4AawSm9QiMN//N9Ujyrk2DA4c2t5I.',
+receive_1   |     id: 1678430079802
+receive_1   |   }
+receive_1   | }
+receive_1   | 
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+receive_1   | [USERS_FETCHED] handled fetched users message, emitting event.
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430083665' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_CREATED] handled create user message, emitting event...
+receive_1   | is ready to publish event
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430087668' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430091673' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$4k3QXDSXNM0QgL3lzZAI2O7Fs.QTXd1Hz0UwHzhOk5W1Cj59D1sAK',
+receive_1   |     id: 1678430094810
+receive_1   |   }
+receive_1   | }
+receive_1   | 
+send_1      | [FETCH_USERS] Sending fetch users message...
+send_1      | is ready to send message
+receive_1   | [FETCH_USERS] Received fetch users message: {
+receive_1   |   data: '',
+receive_1   |   usersCreated: [
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+receive_1   |       id: 1678430034878
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$lZktGnUT5J5WYDPsa.uStuJXH2bJfM4Wj1EKmJh2Kzq/B5UOVti56',
+receive_1   |       id: 1678430049816
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$A3d2A572ReZwn7JH.woPwuOQFEeokOVDqFs01RxYGsVv6orgzQTv6',
+receive_1   |       id: 1678430064819
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$eXVcUQ/mlk5RARKhKr8fhuv4AawSm9QiMN//N9Ujyrk2DA4c2t5I.',
+receive_1   |       id: 1678430079802
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$4k3QXDSXNM0QgL3lzZAI2O7Fs.QTXd1Hz0UwHzhOk5W1Cj59D1sAK',
+receive_1   |       id: 1678430094810
+receive_1   |     }
+receive_1   |   ]
+receive_1   | }
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430095673' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430099678' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_CREATED] handled create user message, emitting event...
+receive_1   | is ready to publish event
+receive_1   | [USERS_FETCHED] handled fetched users message, emitting event.
+receive_1   | is ready to publish event
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430103681' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430107684' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$A1PnsHPYNTYGaYHbYhx.le6juBybbQZPq7Vw4fH3SakA/uV6vIchy',
+receive_1   |     id: 1678430109806
+receive_1   |   }
+receive_1   | }
+receive_1   | 
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430111668' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USERS] Sending fetch users message...
+send_1      | is ready to send message
+receive_1   | [FETCH_USERS] Received fetch users message: {
+receive_1   |   data: '',
+receive_1   |   usersCreated: [
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+receive_1   |       id: 1678430034878
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$lZktGnUT5J5WYDPsa.uStuJXH2bJfM4Wj1EKmJh2Kzq/B5UOVti56',
+receive_1   |       id: 1678430049816
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$A3d2A572ReZwn7JH.woPwuOQFEeokOVDqFs01RxYGsVv6orgzQTv6',
+receive_1   |       id: 1678430064819
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$eXVcUQ/mlk5RARKhKr8fhuv4AawSm9QiMN//N9Ujyrk2DA4c2t5I.',
+receive_1   |       id: 1678430079802
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$4k3QXDSXNM0QgL3lzZAI2O7Fs.QTXd1Hz0UwHzhOk5W1Cj59D1sAK',
+receive_1   |       id: 1678430094810
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$A1PnsHPYNTYGaYHbYhx.le6juBybbQZPq7Vw4fH3SakA/uV6vIchy',
+receive_1   |       id: 1678430109806
+receive_1   |     }
+receive_1   |   ]
+receive_1   | }
+receive_1   | [USER_CREATED] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430115672' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430119679' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USERS_FETCHED] handled fetched users message, emitting event.
+receive_1   | is ready to publish event
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430123684' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$ILZkspBYpxGfqRj0zztvCu3MAxug7c7H9RckPo4y2hIyOakbpZDw6',
+receive_1   |     id: 1678430124794
+receive_1   |   }
+receive_1   | }
+receive_1   | 
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430127687' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+receive_1   | [USER_CREATED] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430131695' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+send_1      | [FETCH_USERS] Sending fetch users message...
+send_1      | is ready to send message
+receive_1   | [FETCH_USERS] Received fetch users message: {
+receive_1   |   data: '',
+receive_1   |   usersCreated: [
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+receive_1   |       id: 1678430034878
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$lZktGnUT5J5WYDPsa.uStuJXH2bJfM4Wj1EKmJh2Kzq/B5UOVti56',
+receive_1   |       id: 1678430049816
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$A3d2A572ReZwn7JH.woPwuOQFEeokOVDqFs01RxYGsVv6orgzQTv6',
+receive_1   |       id: 1678430064819
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$eXVcUQ/mlk5RARKhKr8fhuv4AawSm9QiMN//N9Ujyrk2DA4c2t5I.',
+receive_1   |       id: 1678430079802
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$4k3QXDSXNM0QgL3lzZAI2O7Fs.QTXd1Hz0UwHzhOk5W1Cj59D1sAK',
+receive_1   |       id: 1678430094810
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$A1PnsHPYNTYGaYHbYhx.le6juBybbQZPq7Vw4fH3SakA/uV6vIchy',
+receive_1   |       id: 1678430109806
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$ILZkspBYpxGfqRj0zztvCu3MAxug7c7H9RckPo4y2hIyOakbpZDw6',
+receive_1   |       id: 1678430124794
+receive_1   |     }
+receive_1   |   ]
+receive_1   | }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430135698' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+receive_1   | [USERS_FETCHED] handled fetched users message, emitting event.
+receive_1   | is ready to publish event
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430139677' }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$3NO6ydVIEQ6LJqrVRTiEv.Fz6wOyt8lwSjy9KeNzAp0G3Q6nztqTm',
+receive_1   |     id: 1678430139784
+receive_1   |   }
+receive_1   | }
+receive_1   | 
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430143682' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_CREATED] handled create user message, emitting event...
+receive_1   | is ready to publish event
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430147683' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [FETCH_USER_BY_ID] Sending fetch user by id message...
+send_1      | is ready to send message
+send_1      | awaiting response { consumerTag: '1678430151689' }
+receive_1   | [FETCH_USER_BY_ID] Received fetch user by id message: { data: { id: 1678430034878 } }
+send_1      | [FETCH_USERS] Sending fetch users message...
+send_1      | is ready to send message
+receive_1   | [FETCH_USERS] Received fetch users message: {
+receive_1   |   data: '',
+receive_1   |   usersCreated: [
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$/wJY728IFLsb.GaKWtXfHuN0ZuaKztW4Ul7WA7yvb/fS0BR7Jmr2S',
+receive_1   |       id: 1678430034878
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$lZktGnUT5J5WYDPsa.uStuJXH2bJfM4Wj1EKmJh2Kzq/B5UOVti56',
+receive_1   |       id: 1678430049816
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$A3d2A572ReZwn7JH.woPwuOQFEeokOVDqFs01RxYGsVv6orgzQTv6',
+receive_1   |       id: 1678430064819
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$eXVcUQ/mlk5RARKhKr8fhuv4AawSm9QiMN//N9Ujyrk2DA4c2t5I.',
+receive_1   |       id: 1678430079802
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$4k3QXDSXNM0QgL3lzZAI2O7Fs.QTXd1Hz0UwHzhOk5W1Cj59D1sAK',
+receive_1   |       id: 1678430094810
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$A1PnsHPYNTYGaYHbYhx.le6juBybbQZPq7Vw4fH3SakA/uV6vIchy',
+receive_1   |       id: 1678430109806
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$ILZkspBYpxGfqRj0zztvCu3MAxug7c7H9RckPo4y2hIyOakbpZDw6',
+receive_1   |       id: 1678430124794
+receive_1   |     },
+receive_1   |     {
+receive_1   |       name: 'John Doe',
+receive_1   |       email: 'test@test.com',
+receive_1   |       password: '$2a$10$3NO6ydVIEQ6LJqrVRTiEv.Fz6wOyt8lwSjy9KeNzAp0G3Q6nztqTm',
+receive_1   |       id: 1678430139784
+receive_1   |     }
+receive_1   |   ]
+receive_1   | }
+receive_1   | [USER_FETCHED_BY_ID] handled create user message, emitting event...
+receive_1   | is ready to publish event
+send_1      | [CREATE_USER] Sending create user message...
+send_1      | is ready to send message
+receive_1   | [CREATE_USER] Received create user message: {
+receive_1   |   data: { name: 'John Doe', email: 'test@test.com', password: '<password>' }
+receive_1   | }
+receive_1   | {
+receive_1   |   user: {
+receive_1   |     name: 'John Doe',
+receive_1   |     email: 'test@test.com',
+receive_1   |     password: '$2a$10$PK/WTfLYfZwwxHy6lFMCBuKcGMNpAjnGTUBQrAB2RM5uo1mcLNKhS',
+receive_1   |     id: 1678430154778
+receive_1   |   }
+receive_1   | }
+receive_1   | 
