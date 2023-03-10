@@ -32,7 +32,7 @@ rmqClient.onQueue(Queues.USER_EVENTS).handle(UsersQueueEventTypes.USERS_FETCHED)
   next: (event: EventMessage) => {
     const data = event.data;
     console.log(`[${UsersQueueEventTypes.USERS_FETCHED}] Received users fetched event:`, { data });
-    // rmqClient.ack(event.message);
+    rmqClient.ack(event.message);
   }
 });
 
